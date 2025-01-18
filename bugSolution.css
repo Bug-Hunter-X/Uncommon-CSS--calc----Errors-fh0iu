@@ -1,0 +1,31 @@
+/* bugSolution.css */
+
+/* Correct use of calc() considering parent element width */
+#parent {
+  width: 500px;
+}
+
+#child {
+  width: calc(100% - 20px); /* 100% now refers to the parent's width */
+}
+
+/* Correct use of calc() with consistent units and operators */
+.element {
+  width: calc(10px + 20%); /* Consistent units and correct operators*/
+  height: calc(50px + 5em); /* Mix of px and em is allowed and correct */
+}
+
+/* Correct use of calc() including units*/
+.anotherElement {
+  width: calc(10px + 20px);
+}
+
+/* Solution for incorrect operator usage */
+.correctedElement {
+  width: calc(10px + 10% + 20px); /* Added operator between 10% and 20px */
+}
+
+/*Solution for missing units*/
+.correctedElement2 {
+  width: calc(10px + 20);
+}
